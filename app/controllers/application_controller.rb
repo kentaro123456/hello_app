@@ -1,3 +1,7 @@
 class ApplicationController < ActionController::Base
- git config --global user.name ""
+  protect_from_forgery with: :exception
+
+  def hello
+    render html: "hello, world!"
+  end
 end
